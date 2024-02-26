@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="styleshet" href="style.css">
+    <link rel="styleshet" media="screen and (max-width:800px)"
+     href="tablet.css">
+     <link rel="styleshet" media="screen and (max-width:530px)"
+     href="phone.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('photo_collage/trip.jpg') no-repeat center center/cover;
+    height: 900px;
+    width: 80%;
+    z-index: -1;
+    opacity: .8;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: .6s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+}
+
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 400px;
+    height: 300px
+}
+#intro{
+display: flex;
+flex-direction: column;
+text-align: justify;
+padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Resume Section */
+.resume{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px; 
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 500px;
+    height: 400px
+}
+#intro{
+display: flex;
+flex-direction: column;
+text-align: justify;
+padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* Portfolio Section */
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    align-items: center;
+    padding: 20px;
+
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+
+}
+.gallery img{
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+}
+
+/* Services */
+#services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgb(255,45,45) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+.box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(255,45,45);
+}
+.box img{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+}/* contact section */
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+}.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+    </style>
+</head>
+<body >
+ <nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li> 
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+ </nav> 
+ 
+ <section id="home">
+    <div class="main">
+        <h1 class="headings">HASHU SARO YETA <br> My Name Is <br> YAKOB HISKEL </h1>
+        <button class="btn">
+         Hire Me
+        </button>
+        </div>
+ </section>
+
+ <section id="about">
+    <div id="pic">
+        <h1 class="headings">ABOUT ME</h1>
+        <img src="photo_2024-01-30_12-34-33.jpg" alt="">
+        <div id="intro">
+            <h2>YAKOB HISKEL</h2>
+            <p>My name is Yakob Hiskel, I was born in Wolaita Zone, Offa Gesuba Woreda 
+    by special Name 01 Kebele I was born in 1994. <br> next to this I studying
+    in Offa Gesuba primary and General Secondary and Preparatory High School
+    I finished it there .<br> Then, as the Lord's permission, I scored university<br>
+    results and was assigned to Jinka University. Now I am studying 3rd year
+    Computer Science at Jinka University If God willing, I will finish it
+    in 2017.<br>
+     XOSSA SHENE POLLETO !!!<br>
+    TA POLLUWA TA GODAWU NENI LOYITA HANNA TAWU WOSSA<br> 
+    AWA GODA NAA'A YESUSA GESHA AYANNA SAROYI SHAHETENAGE UBBASI GIDO AMEN AMEN !! </p>
+        </div>
+    </div>
+ </section>
+
+ <section id="resume">
+    <div id="intro">
+        <h1 class="headings">Resume</h1>
+        <img src="photo_collage/dear.jpg" alt="">
+        <div id="intro">
+            <h2>YAKOB HISKEL</h2>
+            <p>My name is Yakob Hiskel I was born in Wolaita Zone, Offa Gesuba Woreda <br>
+                by special Name 01 Kebele I was born in 1994.<br> next to this I studying
+                in Offa Gesuba primary and General Secondary and Preparatory High School. <br> I finished it there . Then, as the Lord's permission, I scored university </p>
+        </div>
+    </div>
+ </section>
+
+ <section id="portfolio">
+    <h1 class="headings">PORTFOLIO</h1>
+    <div class="gallery">
+        <img src="photo_collage/1663224334190.jpg" alt="">
+        <img src="photo_collage/1700281450959.jpg" alt="">
+        <img src="photo_collage/1663916156700.jpg" alt="">
+        <img src="photo_collage/1663916578124.jpg" alt="">
+        <img src="photo_collage/1701439854456.jpg" alt="">
+        <img src="photo_collage/1700281512710.jpg" alt="">
+    </div>
+ </section>
+
+ <section id="services">
+    <h1 class="headings">SERVICES</h1>
+    <div class="row">
+        <div class="box">
+            <img src="photo_2024-01-30_12-34-33.jpg" alt="">
+            <h1 class="headings">Skills</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Magni, fugit. Et hic rem nemo quas animi, soluta rerum omnis! 
+                Amet omnis magnam maiores deserunt dolorum voluptatum vero deleniti error sed?</p>
+        </div>
+        <div class="box">
+            <img src="photo_2024-01-30_12-34-33.jpg" alt="">
+            <h1 class="headings">Experiences <br> Design</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Magni, fugit. Et hic rem nemo quas animi, soluta rerum omnis! 
+                Amet omnis magnam maiores deserunt dolorum voluptatum vero deleniti error sed?</p>
+        </div>
+        <div class="box">
+            <img src="photo_2024-01-30_12-34-33.jpg" alt="">
+            <h1 class="headings">Abilities</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Magni, fugit. Et hic rem nemo quas animi, soluta rerum omnis! 
+                Amet omnis magnam maiores deserunt dolorum voluptatum vero deleniti error sed?</p>
+        </div>
+    </div>
+ </section>
+
+<!-- End Contact Section -->
+</main>
+<!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>@</span></strong>
+    </div>
+    <div class="credits">
+      Designed by <a href="#">YAKOB HISKEL</a>
+    </div>
+  </div>
+</footer>
+
+ <section id="contact">
+    <h1 class="headings">CONTACT</h1>
+    <form action="" class="form">
+        <input type="text" name="name" class="input" placeholder="Enter Yor Name">
+        <input type="email" name="email" class="input"
+        placeholder="Enter Your Email">
+        <textarea name="msg" id="msg" cols="30" rows="10"
+        placeholder="Enter Your Message"></textarea>
+        <input type="submit" value="SEND" id="send">
+    </form>
+ </section>
+</body>
+</html>
